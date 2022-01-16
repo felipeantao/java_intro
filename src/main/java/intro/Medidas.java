@@ -4,11 +4,41 @@ public class Medidas {
 
     public static void main(String[] args){
 
+
+String opcao = "Idd";
+
+switch (opcao) {
+    case "ifSimples":
+        System.out.println("Você escolheu executar o método If Simples");
+        ifSimples();
+        break;
+    case "curto":
+        System.out.println("Você escolheu executar o método curto");
         calcularAreaModoCompacto();
+        break;
+    case "extenso":
+        System.out.println("Você escolheu executar o método Extenso");
         calcularAreaModoExtenso();
+        break;
+    default:
+        System.out.println("Você escolheu um valor inválido");
+        break;
+}
 
 
 
+
+    }
+
+    public static void ifSimples(){
+        String modo = "curto";
+
+        if (modo=="curto") {
+            calcularAreaModoCompacto();
+        }
+        else{
+            calcularAreaModoExtenso();
+        }
     }
 
     public static void calcularAreaModoExtenso(){
